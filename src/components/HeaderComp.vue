@@ -1,6 +1,6 @@
 <template>
 
-  <header>
+  <header class="gb-container">
     <div class="logo">
       <img src="../assets/img/dc-logo.png" alt="Logo">
     </div>
@@ -98,16 +98,16 @@ export default {
 @import '../assets/style/mixins';
 
 header{
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  height: 80px;
-  line-height: 76px;
+  height: 100px;
+  line-height: 94px;
 
   .logo{
     float: left;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
+    img{
+      width: 100%;
+    }
   }
 
   nav{
@@ -126,7 +126,7 @@ header{
       color: black;
       font-size: .7rem;
       font-weight: 600;
-      @include linkStyleNav();
+      @include linkStyle();
       &:hover,
       &.active{
         border-bottom: 4px solid $primary-color;
