@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="gb-container">
 
     <HeaderComp />
 
@@ -22,7 +22,7 @@ export default {
     HeaderComp,
     MainComp,
     FooterComp
-}
+  }
 }
 </script>
 
