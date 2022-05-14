@@ -6,7 +6,7 @@
     </div>
 
     <nav>
-      <ul>
+      <ul class="d-flex m-0">
         <li v-for="(voceNav, index) in vociNav" :key="`nav-${index}`">
           <a :class="{'active' : voceNav.isActive}" :href="voceNav.href">{{voceNav.name}}</a>
         </li>
@@ -112,10 +112,6 @@ header{
 
   nav{
     float: right;
-    ul{
-      display: flex;
-      margin: 0;
-    }
 
     li{
       padding: 0 15px;

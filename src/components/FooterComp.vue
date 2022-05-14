@@ -8,53 +8,52 @@
           <div class="row row-cols-2">
 
             <div class="columns">
-              <div class="row row-cols-3 py-3">
+              <div class="row row-cols-3 py-4">
 
                 <div class="col">
                   <h6>dc comics</h6>
                   <ul>
+                    <li><a href="#">characters</a></li>
                     <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
+                    <li><a href="#">movies</a></li>
+                    <li><a href="#">tv</a></li>
+                    <li><a href="#">games</a></li>
+                    <li><a href="#">videos</a></li>
+                    <li><a href="#">news</a></li>
                   </ul>
 
                   <h6>shop</h6>
                   <ul>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
+                    <li><a href="#">shop dc</a></li>
+                    <li><a href="#">shop dc collectibles</a></li>
                   </ul>
                 </div>
 
                 <div class="col">
                   <h6>dc</h6>
                   <ul>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Privacy policy (New)</a></li>
+                    <li><a href="#">Ad choices</a></li>
+                    <li><a href="#">advertising</a></li>
+                    <li><a href="#">jobs</a></li>
+                    <li><a href="#">subscriptions</a></li>
+                    <li><a href="#">talent workshops</a></li>
+                    <li><a href="#">cpsc certificates</a></li>
+                    <li><a href="#">ratings</a></li>
+                    <li><a href="#">shop help</a></li>
+                    <li><a href="#">contact us</a></li>
                   </ul>
                 </div>
 
                 <div class="col">
                   <h6>sites</h6>
                   <ul>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">comics</a></li>
+                    <li><a href="#">dc</a></li>
+                    <li><a href="#">mad magazine</a></li>
+                    <li><a href="#">dc kids</a></li>
+                    <li><a href="#">dc universe</a></li>
+                    <li><a href="#">dc power visa</a></li>
                   </ul>
                 </div>
               </div>
@@ -139,7 +138,6 @@ footer{
     .logo{
       margin-top: -50px;
       width: 100%;
-      // max-width: 450px;
     }
   }
 
@@ -156,6 +154,9 @@ footer{
       border-radius: none;
       color: white;
       text-transform: uppercase;
+      &:hover{
+        background-color: $primary-color;
+      }
     }
 
     nav{
