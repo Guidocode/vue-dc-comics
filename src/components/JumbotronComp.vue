@@ -10,7 +10,7 @@ export default {
 
 <style>
 .jumbo{
-  height: 350px;
+  min-height: 350px;
   background-image: url(../assets/img/jumbotron.jpg);
   background-size: cover;
 }

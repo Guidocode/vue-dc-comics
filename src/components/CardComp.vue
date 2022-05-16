@@ -20,10 +20,15 @@ export default {
 
 <style lang="scss" scoped>
 .gb-card{
-  width: calc(100% / 6 - 40px);
-  margin: 5px 20px;
+  width: calc(100vw / 8 - 20px);
+  margin: 5px 10px;
 
   .image-card{
+    height: calc(100vw / 8 - 40px);
+    overflow: hidden;
+  }
+
+  .image-card img{
     width: 100%;
   }
 }
