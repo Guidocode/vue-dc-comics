@@ -3,6 +3,8 @@
 
     <HeaderComp />
 
+    <JumbotronComp />
+
     <MainComp />
 
     <LightBlueBand />
@@ -17,6 +19,7 @@ import HeaderComp from "./components/HeaderComp.vue";
 import MainComp from "./components/MainComp.vue";
 import FooterComp from "./components/FooterComp.vue";
 import LightBlueBand from "./components/LightBlueBand.vue";
+import JumbotronComp from "./components/JumbotronComp.vue";
 
 
 export default {
@@ -25,7 +28,8 @@ export default {
     HeaderComp,
     MainComp,
     FooterComp,
-    LightBlueBand
+    LightBlueBand,
+    JumbotronComp
 }
 }
 </script>
