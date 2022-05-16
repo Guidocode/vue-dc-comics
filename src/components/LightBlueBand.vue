@@ -3,15 +3,16 @@
     <div class="gb-container">
       <ul class="d-flex justify-content-between m-0 px-5">
 
-          <li v-for="(voceMenu, index) in vociMenu" :key="`menu-${index}`">
-            <a class="d-flex align-items-center" href="#">
-              <!-- ERRORE -->
-              <div class="icon" :style="{backgroundImage: 'url('+ require(`../assets/img/${voceMenu.image}`)+')'}"></div>
-              <span>{{voceMenu.name}}</span>
-            </a>
-          </li>
+        <li v-for="(voceMenu, index) in vociMenu" :key="`menu-${index}`">
+          <a class="d-flex align-items-center" href="#">
+            <!-- ERRORE -->
+            <div class="icon" 
+            :style="{backgroundImage: 'url('+ require(`../assets/img/${voceMenu.image}`)+')'}"></div>
+            <span>{{voceMenu.name}}</span>
+          </a>
+        </li>
           
-        </ul>
+      </ul>
     </div>
   </div>
 </template>
