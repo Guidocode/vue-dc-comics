@@ -1,10 +1,13 @@
 <template>
   <main>
 
+    <!-- Titolo contenitore -->
     <div class="gb-container">
       <div class="title-content">current series</div>
     </div>
+    <!-- /Titolo contenitore -->
 
+    <!-- Card Component -->
     <div class="gb-container container-cards d-flex flex-wrap">
 
       <CardComp 
@@ -13,6 +16,8 @@
       />
 
     </div>
+  <!-- /Card Component -->
+
   </main>
 </template>
 
@@ -41,8 +46,15 @@ main{
   padding: 40px 0;
   color: white;
   background-color: #1C1C1C;
+  
+  // .gb-container{
+  //   position: relative;
+  // }
 
   .title-content{
+    // position: absolute;
+    // top: -55;
+    // left: 0;
     display: inline-block;
     text-transform: uppercase;
     color: white;

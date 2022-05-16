@@ -120,7 +120,7 @@ header{
     a{
       display: inline-block;
       color: black;
-      font-size: .7rem;
+      font-size: .6rem;
       font-weight: 600;
       @include linkStyle();
       &:hover,
@@ -133,5 +133,3 @@ header{
   }
 }
 </style>
-
-{'active':item.isActive}

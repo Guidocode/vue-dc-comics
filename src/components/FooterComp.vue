@@ -7,57 +7,46 @@
         <div class="container-fluid">
           <div class="row row-cols-2">
 
+            <!-- COLONNE FOOTER DINAMICHE -->
             <div class="columns">
               <div class="row row-cols-3 py-4">
 
                 <div class="col">
                   <h6>dc comics</h6>
                   <ul>
-                    <li><a href="#">characters</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">movies</a></li>
-                    <li><a href="#">tv</a></li>
-                    <li><a href="#">games</a></li>
-                    <li><a href="#">videos</a></li>
-                    <li><a href="#">news</a></li>
+                    <li v-for="(dcComicsItem, index) in dcComicsMenu" :key="`dcComicsItem-${index}`">
+                      <a :href="dcComicsItem.href">{{dcComicsItem.name}}</a>
+                    </li>
                   </ul>
 
                   <h6>shop</h6>
                   <ul>
-                    <li><a href="#">shop dc</a></li>
-                    <li><a href="#">shop dc collectibles</a></li>
+                    <li v-for="(shopItem, index) in shopMenu" :key="`shopItem-${index}`">
+                      <a :href="shopItem.href">{{shopItem.name}}</a>
+                    </li>
                   </ul>
                 </div>
 
                 <div class="col">
                   <h6>dc</h6>
                   <ul>
-                    <li><a href="#">Terms Of Use</a></li>
-                    <li><a href="#">Privacy policy (New)</a></li>
-                    <li><a href="#">Ad choices</a></li>
-                    <li><a href="#">advertising</a></li>
-                    <li><a href="#">jobs</a></li>
-                    <li><a href="#">subscriptions</a></li>
-                    <li><a href="#">talent workshops</a></li>
-                    <li><a href="#">cpsc certificates</a></li>
-                    <li><a href="#">ratings</a></li>
-                    <li><a href="#">shop help</a></li>
-                    <li><a href="#">contact us</a></li>
+                    <li v-for="(dcItem, index) in dcMenu" :key="`dcItem-${index}`">
+                      <a :href="dcItem.href">{{dcItem.name}}</a>
+                    </li>
                   </ul>
                 </div>
 
                 <div class="col">
                   <h6>sites</h6>
                   <ul>
-                    <li><a href="#">dc</a></li>
-                    <li><a href="#">mad magazine</a></li>
-                    <li><a href="#">dc kids</a></li>
-                    <li><a href="#">dc universe</a></li>
-                    <li><a href="#">dc power visa</a></li>
+                    <li v-for="(sitesItem, index) in sitesMenu" :key="`sitesItem-${index}`">
+                      <a :href="sitesItem.href">{{sitesItem.name}}</a>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
+            <!-- /COLONNE FOOTER DINAMICHE -->
 
             <div class="col">
               <img class="logo" src="../assets/img/dc-logo-bg.png" alt="">
@@ -76,16 +65,17 @@
       <div class="gb-container d-flex justify-content-between align-items-center">
         <button type="button" class="btn btn-outline-primary gb-btn">sing-up now!</button>
 
+        <!-- NAV SOCIAL DINAMICA -->
         <nav class="d-flex align-items-center">
           <h6 class="mb-0">follow us</h6>
           <ul class="d-flex mb-0">
-            <li><a href="#"><img src="../assets/img/footer-facebook.png" alt="facebook"></a></li>
-            <li><a href="#"><img src="../assets/img/footer-twitter.png" alt="twitter"></a></li>
-            <li><a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a></li>
-            <li><a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a></li>
-            <li><a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope"></a></li>
+            <li v-for="(socialItem, index) in social" :key="`socialItem-${index}`">
+              <a :href="socialItem.href"><img :src="require(`../assets/img/${socialItem.image}`)" :alt="socialItem.name"></a>
+            </li>
           </ul>
         </nav>
+        <!-- /NAV SOCIAL DINAMICA -->
+
       </div>
       
     </div>
@@ -95,8 +85,24 @@
 </template>
 
 <script>
+import dcComicsMenu from '../assets/data/dccomics-items-footer'
+import shopMenu from '../assets/data/shop-items-footer'
+import dcMenu from '../assets/data/dc-items-footer'
+import sitesMenu from '../assets/data/sites-items-footer'
+import social from '../assets/data/social-footer'
+
 export default {
-  name: 'FooterComp'
+  name: 'FooterComp',
+
+  data(){
+    return{
+      dcComicsMenu,
+      shopMenu,
+      dcMenu,
+      sitesMenu,
+      social
+    }
+  }
 }
 </script>
 
@@ -105,6 +111,7 @@ footer{
 @import '../assets/style/vars';
 @import '../assets/style/mixins';
 
+  // FOOTER TOP
   .footer-top{
     max-height: 350px;
     background-image: url(../assets/img/footer-bg.jpg);
@@ -129,8 +136,7 @@ footer{
         font-size: .7rem;
         color: #979291;
         &:hover{
-          text-decoration: underline;
-          color: white;
+          color: $primary-color;
         }
       }
     }
@@ -141,6 +147,7 @@ footer{
     }
   }
 
+  // FOOTER BOTTOM
   .footer-bottom{
     height: 80px;
     background-color: #303030;
@@ -171,6 +178,10 @@ footer{
 
       a img{
         width: 25px;
+        transition: .2s;
+        &:hover{
+          filter: brightness(.7);
+        }
       }
     }
   }
