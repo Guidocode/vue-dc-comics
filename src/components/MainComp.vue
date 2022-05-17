@@ -18,6 +18,10 @@
     </div>
   <!-- /Card Component -->
 
+  <div class="gb-container  text-center">
+    <button type="button" class="btn btn-primary gb-btn">Load More</button>
+  </div>
+
   </main>
 </template>
 
@@ -62,6 +66,14 @@ main{
     padding: 5px 10px;
     font-weight: 500;
     margin-bottom: 20px;
+  }
+
+  .gb-btn{
+    // display: inline-block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    padding: 5px 40px;
   }
 }
 </style>

@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 .gb-card{
   width: calc(100vw / 8 - 20px);
-  margin: 5px 10px 20px;
+  margin: 5px 10px 30px;
   cursor: pointer;
   transition: .3s;
   &:hover{
